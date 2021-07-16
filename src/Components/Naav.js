@@ -1,15 +1,21 @@
 import React,{useState} from 'react';
+import { useHistory } from "react-router-dom";
+
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+//import data from './Data'
 
 
-const Naav = (props) => {
+function Naav  () {
   
-  const [searchText,setSearchText] =useState([]);
+  const history = useHistory();
 
-   const handleSearch =() => {
-     props.recipes.filter((item) => {
-      return (item.name.toLowerCase().includes(searchText.toLowerCase()))}
-     )} 
+  const [searchText,setSearchText] =useState([]);
+  
+  
+  const handleSearch = () => history.push('/header');
+    //  props.recipes.filter((item) => {
+    //   return (item.name.toLowerCase().includes(searchText.toLowerCase()))}
+    //  )} 
 
     return (
     
@@ -20,7 +26,8 @@ const Naav = (props) => {
         <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2"
             onChange = {(e)=> setSearchText(e.target.value)} />
-          <Button variant="outline-info" className="mr-5" onKeyPress={handleSearch}>Search</Button>
+
+          <Button variant="outline-info" className="mr-5" onClick={handleSearch}>Search</Button>
         </Form>
       </Navbar>
         </div>

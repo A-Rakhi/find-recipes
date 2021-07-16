@@ -4,7 +4,7 @@ import {Card} from 'react-bootstrap';
 import './Cart.css'
 
 const Cart = (props) => {
-    const {strMeal,strMealThumb,strArea,strInstructions,strIngredient} = props.items;
+    const {strMeal,strMealThumb,strArea,strInstructions} = props.items;
     const [details, setDetails] = useState(null);
 
 
@@ -33,13 +33,13 @@ const Cart = (props) => {
     
     <Card.Body>
     <Card.Title>Area: {strArea}</Card.Title>
-      <Card.Text>
-      {/* {props.strIngredient.map((p , index) => (
+      {/* <Card.Text>
+      {props.strIngredient.map((p , index) => (
         <li key={p.idMeal}>{p.index}</li>
-      ))} */}
+      ))}
          Ingredients: {strIngredient}
 
-      </Card.Text>
+      </Card.Text> */}
       <Card.Text>
         <p className="text-dark"><strong>INSTRUCTIONS:</strong> 
       <br/>
