@@ -1,11 +1,13 @@
 .cart{
+    box-sizing: border-box;
     width: 380px;
     margin: 15px auto;
     border: 1px solid lightblue;
+    text-align: center;
 }
 .card-img-top{
     height: 220px;
-    margin: 8px 0px 20px 6px;
+    margin: 0px 0px 20px 0px;
     width: 95%;
 }
 .details-cart{
